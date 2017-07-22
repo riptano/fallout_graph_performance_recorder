@@ -1,5 +1,6 @@
 import os
 from GraphResultsFilesParser import GraphResultsFilesParser
+from fallout.api import FalloutAPI
 
 class FalloutTestRunsParser():
 	oauth_token = None
@@ -13,7 +14,7 @@ class FalloutTestRunsParser():
 		cls.fallout_user = 'jenkins-dse@datastax.com'
 		cls.fallout_test = fallout_test
 		# set these environment variables
-		os.environ['OAUTH_TOKEN'] = cls.oauth_token
+		os.environ['FALLOUT_OAUTH_TOKEN'] = cls.oauth_token
 		os.environ['FALLOUT_USER'] = cls.fallout_user
 		os.environ['TEST'] = cls.fallout_test
 		# will need to keep track of files that are downloaded locally
