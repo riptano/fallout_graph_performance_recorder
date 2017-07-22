@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "fallout-graph-performance",
+  "private_key_id": "d54dc1b2ca5754b3fbf183a660816519d8b28129",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCjdiBCMvCSQIt2\nWiO7sbWAhBB0dGhXfFAuFIkH2LQ1m7qIMyC8nyqGtq2WEzzj/HhGHPwaglqr1Yc+\nx1t47qkPgTlNVj5h5S4IBMReE3cu3m54vxysDIzSVEtSQaePh1IZcyyWZIDi4eqT\nFF4F/RbIhiWYWWDgaFXisnPhxfZYd52+XiGvgb5/c1MvOPyy/fPzWL0VZ4YSFoCU\nmGt/M8JvcP9dPp0TGYRHnYIzClU77tZd+e6XGZs+IGEH1eWv1WGopaBWuVTF1qxE\nETygdr43a7Z0Xp80sscf6QaoGF5hr2aWItbPHj2I+HQLtKj+IKpait8BKPgn1frZ\nkbx6RTipAgMBAAECggEAReX28GfpAJlSKbds7U+WHhEbGjlG/xYdET9dw3mywfPI\nRYKbfp0PadDHFNRAJvuokM7HLSzNygoCjeFg56sipwsqrjvxbBo831fugo4PWn7q\nPX73q0iolS5PkSqbFOCYRmK+T8dFZ/+UN/WvKR9rNS9L90RNDVkAVPLbY9GrwHMi\nzaWTELOWYIKlIwhN74Usrpl4MDbhFAX0SxbdVM36SRhtbLiDfCr71vksOPbVayU/\npuS248H8Cm4YPMMh5RtYGisv1O9obWfqm7ucDXSk67a/vUTioqFUu/WxGgsNeWOO\noJ0y/V6SxMpCKcDmXp4Rcs7rcsjcQbtila0quDt2iwKBgQDYHtMGhdUxLoMtYlFO\nFl3hGjfK5PTWV35sDfAXn1Ii4OGOE89XxUMV+2zJSl+Uo4awSv+/Jln2wronXAO9\nbzFBIYZEv8GydP8DDhBSPvGy2F3OYgrUtkAnFV8nDPSnhHdrxQtcbRrIUTmxyBM/\nHP0lJ3kayhQ2DGlESY6oKtBitwKBgQDBn8cGOSD6zkXU0qITH9QNwMKTYaJRSM9V\nhlTw1TH+3DkV/d33Ekh9GwpCFyY03l+xEtBniIceKMFFXExuNtirPG269zlIct3d\nCUb8ilr2Ex1ZdTq2S+6o2okYsAi60e/T7+2TUzI4+X2lXa2SKynnrKkDvwvQmBwU\n1Ed1lXpfnwKBgFVuCdjAOn/QdQYRoTYO3VlH9dn8G1RHDbBE6i1MSzmCT2bMKd/2\nGAiudFg1UAb/hRRW8TVsQY+rdc5tLwVI2N14FQ1EB5s1aECa5JS+UOhzYtFcLA/d\nYwqQBib3lhZJ5LLzFwSYFEgu43GFNyZxnRd8vQB79PVQfqQBt6R+GBWNAoGBAI1p\nG/o3jxadv/KHQ0ekX0MMHQ92pw2ml4Zm7XJWwoTYYfjlyE7CU57LONq7/XNvVYQF\nsZ9r3wLv0PfPSSLVe7jUEXATTwrSmabtN6MJiRVfMHg9Xfv1yQAZWzdkmXuYCAhJ\nmsGWaX+i91jm6fVvANPrDiVmSkK2VQwBXY9K9G0RAoGBAMzxGyJOjAX23qky+F9v\ny+9q+9VNmtv0RuQSx9FuXCI3UQOZorpC19+CLUnhE1YjxQcq/SO5OfKAg84EMmYg\nT0Z3fotWrg06ZRhguKPJFu/4jKTpRGatzr8jqLITNl8nMbZ4U3N+v80xTkiNw8i7\nVzq+RffB6LqUdAQqdh6IDF+P\n-----END PRIVATE KEY-----\n",
+  "client_email": "shaunak@fallout-graph-performance.iam.gserviceaccount.com",
+  "client_id": "116794263588935060423",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/shaunak%40fallout-graph-performance.iam.gserviceaccount.com"
+}
