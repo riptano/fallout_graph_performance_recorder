@@ -53,15 +53,6 @@ class GoogleSheet():
 				fallout_url_row = curr_row
 			else:
 				list_of_rows.append(curr_row)
-#		for query in list_of_data_dicts[0]:
-#			curr_row = [query]
-			# iterate through data dicts, "add a cell" to curr_row
-#			for data_dict in list_of_data_dicts:
-#				curr_row.append(data_dict[query])
-#				if query == 'FALLOUT TEST RUN URL':
-#					fallout_url_row = curr_row
-#				else:
-#					list_of_rows.append(curr_row)
 		# append the fallout url row last
 		list_of_rows.append(fallout_url_row)
 		# at this point, we have our list of rows. Write them to Google sheet

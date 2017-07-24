@@ -65,6 +65,4 @@ class FalloutTestRunsParser():
 		# time to remove downloaded artifacts, post parsing
 		for path in self.list_of_results_file_paths:
 			self.delete_artifact(path)
-		from pprint import pprint
-		pprint(parsed_results)
 		return parsed_results
