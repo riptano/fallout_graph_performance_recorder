@@ -7,7 +7,7 @@ from pprint import pprint
 # These flags correspond to Google sheet details that we need
 parser = OptionParser()
 parser.add_option("--google_sheet", dest="google_sheet", help="Name of the Google sheet that we are writing our results into.")
-parser.add_option("--worksheet", dest="worksheet", help="The worksheet within the Google spreadsheet that we are witing result into.")
+parser.add_option("--worksheet", dest="worksheet", help="The worksheet within the Google spreadsheet that we are writing result into.")
 parser.add_option("--column_headers", dest="column_headers", help="comma-delimited list of column headers for data. NOTE: The number and order of the column headers must correspond to the number and order of specified results file paths or Fallout test run IDs, respectively.")
 # These flags correspond to source of result of a DSE Graph performance run
 parser.add_option("--results_file_paths", dest="results_file_paths", default=None, help="comma-delimited list of paths to files that contains the performance results we want to write to Google sheet. NOTE: The number and order of results file paths must corespond to the number and order of the specified column headers, respectively.")

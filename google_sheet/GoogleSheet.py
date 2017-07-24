@@ -12,6 +12,7 @@ class GoogleSheet():
 	worksheet_name = None
 	worksheet = None
 	cells = []
+	current_row_number = 1
 
 	def __init__(cls, google_sheet_name, worksheet_name):
 		"""
@@ -39,29 +40,28 @@ class GoogleSheet():
 						each dict in the list is to correspond to a column in the spreadsheet
 		@type list_of_data_dicts:	list of dicts
 		"""
-		current_row_number = 1
+
 		column_headers = ["QUERIES"] + list_of_column_headers
 
 		for idx, header in enumerate(column_headers):
-			cell = self.get_cell(current_row_number, idx + 1)
+			cell = self.get_cell(self.current_row_number, idx + 1)
 			cell.value = header
 
 		for query in list_of_data_dicts[0]:
-			current_row_number += 1
-			self.get_cell(current_row_number, 1).value = query
 
-			# iterate through data dicts, "add a cell" to curr_row
-			for idx, data_dict in enumerate(list_of_data_dicts):
-				self.get_cell(current_row_number, idx + 2).value = data_dict[query]
+			if query != 'FALLOUT TEST RUN URL':
+				self.write_query(query)
+
+		self.write_query(''FALLOUT TEST RUN URL)
 
 		# clear the remainder of the cells
 		for cell in self.cells:
-			if cell.row > current_row_number and cell.col < len(column_headers) + 1:
+			if cell.row > self.current_row_number and cell.col < len(column_headers) + 1:
 				cell.value = ''
 
 		now = time.strftime("%c")
-		current_row_number += 2
-		self.get_cell(current_row_number, 1).value = ["Last updated:  %s" % now]
+		self.current_row_number += 2
+		self.get_cell(self.current_row_number, 1).value = ["Last updated:  %s" % now]
 		self.worksheet.update_cells(self.cells)
 
 	def get_cell(self, row, col):
@@ -70,3 +70,11 @@ class GoogleSheet():
 				return cell
 
 		raise Exception("Invalid cell {}, {}".format(row, col))
+
+	def write_query(self, query):
+		self.current_row_number += 1
+		self.get_cell(self.current_row_number, 1).value = query
+
+		# iterate through data dicts, "add a cell" to curr_row
+		for idx, data_dict in enumerate(self.list_of_data_dicts):
+			self.get_cell(self.current_row_number, idx + 2).value = data_dict[query]
