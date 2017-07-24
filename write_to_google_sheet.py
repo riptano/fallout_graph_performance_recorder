@@ -12,7 +12,7 @@ parser.add_option("--column_headers", dest="column_headers", help="comma-delimit
 # These flags correspond to source of result of a DSE Graph performance run
 parser.add_option("--results_file_paths", dest="results_file_paths", default=None, help="comma-delimited list of paths to files that contains the performance results we want to write to Google sheet. NOTE: The number and order of results file paths must corespond to the number and order of the specified column headers, respectively.")
 parser.add_option("--fallout_test", dest="fallout_test", default=None, help="Name of the Fallout test we are interested in.")
-parser.add_option("--fallout_test_run_ids", dest="fallout_test_run_ids", default=None, help="comma-delimited list of IDs for corresponding test runs we are interested in recording performance results for. NOTE: The number and order of results file paths must corespond to the number and order of the specified column headers, respectively.")
+parser.add_option("--fallout_test_run_ids", dest="fallout_test_run_ids", default=None, help="comma-delimited list of IDs for corresponding test runs we are interested in recording performance results for. NOTE: The number and order of Fallout test run IDs must corespond to the number and order of the specified column headers, respectively.")
 parser.add_option("--fallout_artifact_path", dest="artifact_path", default=None, help="Directory path to Fallout aritfact where performance results are recorded.")
 
 (options, args) = parser.parse_args()
