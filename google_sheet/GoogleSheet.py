@@ -50,9 +50,9 @@ class GoogleSheet():
 		for query in list_of_data_dicts[0]:
 
 			if query != 'FALLOUT TEST RUN URL':
-				self.write_query(query)
+				self.write_query(query, list_of_data_dicts)
 
-		self.write_query(''FALLOUT TEST RUN URL)
+		self.write_query('FALLOUT TEST RUN URL', list_of_data_dicts)
 
 		# clear the remainder of the cells
 		for cell in self.cells:
@@ -71,10 +71,10 @@ class GoogleSheet():
 
 		raise Exception("Invalid cell {}, {}".format(row, col))
 
-	def write_query(self, query):
+	def write_query(self, query, list_of_data_dicts):
 		self.current_row_number += 1
 		self.get_cell(self.current_row_number, 1).value = query
 
 		# iterate through data dicts, "add a cell" to curr_row
-		for idx, data_dict in enumerate(self.list_of_data_dicts):
+		for idx, data_dict in enumerate(list_of_data_dicts):
 			self.get_cell(self.current_row_number, idx + 2).value = data_dict[query]
