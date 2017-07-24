@@ -1,5 +1,19 @@
 class GraphResultsFilesParser():
 
+	def verify_queries_agree(self, list_of_parsed_result_dicts):
+		"""
+		@param list_of_parsed_result_dicts:	list of dicts, whose keys correspond to queries
+		@type list_of_parsed_result_dicts:	list of dicts
+		"""
+		list_of_query_lists = []
+		for result_dict in list_of_parsed_result_dicts:
+			list_of_query_lists.append(result_dict.keys())
+		set_of_first_queries = set(list_of_query_lists[0])
+		for query_list in list_of_query_lists:
+			if set(query_list) != set_of_first_queries:
+				print "\nThe queries for two or more sets of results do not agree.\n"
+				exit()
+
 	def parse_results_from_files(self, list_of_paths_to_results_files):
 		"""
 		@param list_of_paths_to_results_files:	list of local paths to results
@@ -31,4 +45,6 @@ class GraphResultsFilesParser():
 			list_of_mean_dicts.append(curr_mean_dict)
 			list_of_stdev_dicts.append(curr_stdev_dict)
 			curr_results_file.close()
+		# verify that the set of queries are the same for all results files
+		self.verify_queries_agree(list_of_mean_dicts)
 		return {"means" : list_of_mean_dicts, "stdev" : list_of_stdev_dicts}
